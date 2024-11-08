@@ -94,6 +94,42 @@
         <p>hexo常用命令：</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;name&quot;       # 新建文章</span><br><span class="line">hexo new page &quot;name&quot;  # 新建页面</span><br><span class="line">hexo g                # 生成页面</span><br><span class="line">hexo d                # 部署</span><br><span class="line">hexo g -d             # 生成页面并部署</span><br><span class="line">hexo s                # 本地预览</span><br><span class="line">hexo clean            # 清除缓存和已生成的静态文件</span><br><span class="line">hexo help             # 帮助</span><br></pre></td></tr></table></figure>
 
+<p>hexo本地环境配置</p>
+<p>hexo基于Node.js</p>
+<ol>
+<li><p>安装 Node</p>
+</li>
+<li><p>安装hexo 命令如下 <code>npm install -g hexo-cli</code></p>
+</li>
+<li><p>初始化并安装所需组件： </p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init      # 初始化</span><br><span class="line">npm install    # 安装组件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>完成后依次输入下面命令，<strong>启动本地服务器进行预览</strong>：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g   # 生成页面</span><br><span class="line">hexo s   # 启动预览</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>访问</strong> <code>http://localhost:4000</code><strong>，出现 Hexo 默认页面，本地博客安装成功！</strong></p>
+</li>
+<li><p>本地电脑连接github</p>
+</li>
+<li><p>右键 -&gt; Git Bash Here，<strong>设置用户名和邮箱</strong>（去掉GitHub，只填写用户名）：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;GitHub 用户名&quot;</span><br><span class="line">git config --global user.email &quot;GitHub 邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>创建密匙 –&gt; 添加密匙 –&gt;&gt; 验证密匙</p>
+</li>
+<li><p>创建 <strong>GitHub Pages</strong> 仓库</p>
+</li>
+<li><p>部署hexo到GitHub Pages</p>
+<p>首先<strong>安装 hexo-deployer-git</strong>：<code>npm install hexo-deployer-git --save</code></p>
+<p>然后<strong>修改 _config.yml</strong> 文件末尾的 Deployment 部分，修改成如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:用户名/用户名.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>完成后运行 <code>hexo d</code> 将网站上传部署到 GitHub Pages。</p>
+</li>
+</ol>
+<p>​	完成！这时访问我们的 GitHub 域名 <code>https://用户名.github.io</code> 就可以看到 Hexo 网站了。</p>
+
       
     </div>
     <footer class="article-footer">
@@ -101,6 +137,8 @@
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%EF%BC%88%E6%B3%A8%E6%84%8F%EF%BC%9A%E5%86%92%E5%8F%B7%E5%90%8E%E9%9D%A2%E8%A6%81%E5%8A%A0%E7%A9%BA%E6%A0%BC%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%89/" rel="tag">（注意：冒号后面要加空格！！！）</a></li></ul>
+
     </footer>
   </div>
   
@@ -214,7 +252,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%83%E5%95%A5%EF%BC%9F/" rel="tag">吃啥？</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%83%E5%95%A5%EF%BC%9F/" rel="tag">吃啥？</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EF%BC%88%E6%B3%A8%E6%84%8F%EF%BC%9A%E5%86%92%E5%8F%B7%E5%90%8E%E9%9D%A2%E8%A6%81%E5%8A%A0%E7%A9%BA%E6%A0%BC%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%89/" rel="tag">（注意：冒号后面要加空格！！！）</a></li></ul>
     </div>
   </div>
 
@@ -224,7 +262,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E5%90%83%E5%95%A5%EF%BC%9F/" style="font-size: 10px;">吃啥？</a>
+      <a href="/tags/%E5%90%83%E5%95%A5%EF%BC%9F/" style="font-size: 10px;">吃啥？</a> <a href="/tags/%EF%BC%88%E6%B3%A8%E6%84%8F%EF%BC%9A%E5%86%92%E5%8F%B7%E5%90%8E%E9%9D%A2%E8%A6%81%E5%8A%A0%E7%A9%BA%E6%A0%BC%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%89/" style="font-size: 10px;">（注意：冒号后面要加空格！！！）</a>
     </div>
   </div>
 
